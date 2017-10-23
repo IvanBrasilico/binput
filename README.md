@@ -35,7 +35,7 @@ On a View:
         return response # Contains message from Input Command
     # Queue ended, now you could save resulting Project and exit view
     app.hang_out(message)
-    return 'Project created: ' + response # Response contains user entries
+    return 'Project created: ' + + ' '.join('{}:{}'.format(key, val) for key, val in response.items()) # Response contains user entries
 ```
 
 The complete example is packaged within this repository
